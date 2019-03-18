@@ -212,7 +212,7 @@
     </div>
     <script>
 
-        $("#adminId").keyup(
+/*        $("#adminId").keyup(
             function () {
                 if(isNaN($("#adminId").val())){
                     $("#info").text("提示:账号只能为数字");
@@ -221,7 +221,7 @@
                     $("#info").text("");
                 }
             }
-        )
+        )*/
         $("#loginButton").click(function () {
             if($("#adminId").val()==''&&$("#passwd").val()==''){
                 $("#info").text("提示:账号和密码不能为空");
@@ -232,9 +232,9 @@
             else if($("#passwd").val()==''){
                 $("#info").text("提示:密码不能为空");
             }
-            else if(isNaN($("#adminId").val())){
+           /* else if(isNaN($("#adminId").val())){
                 $("#info").text("提示:账号必须为数字");
-            }
+            }*/
             else {
                 $.ajax({
                     type: "POST",
